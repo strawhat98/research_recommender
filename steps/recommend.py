@@ -7,7 +7,8 @@ QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
 COLLECTION_NAME = "research_papers"
 TOP_K = 5
 
-client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+qdrant_url = os.getenv("QDRANT_URL", "http://localhost:6333")
+client = QdrantClient(url=qdrant_url)
 
 @step
 def recommend_similar_papers(papers: list):
