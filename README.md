@@ -1,9 +1,8 @@
 # 🧠 Research Recommender
 
-<p>
-  <img src="https://blog.zenml.io/assets/logo_sq.png" alt="ZenML Badge"/>
-  <img src="https://seeklogo.com/images/Q/qdrant-icon-logo-843D18553D-seeklogo.com.png"/>
-</p>
+[![ZenML](https://img.shields.io/badge/Made%20with-ZenML-blueviolet?style=for-the-badge)](https://zenml.io)
+[![Qdrant](https://img.shields.io/badge/Powered%20by-Qdrant-orange?style=for-the-badge)](https://qdrant.tech)
+[![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-brightgreen?style=for-the-badge)](https://streamlit.io)
 
 > An automated pipeline that fetches the latest open-access Machine Learning research papers daily from arXiv, generates embeddings, stores them in a vector database, and recommends similar papers.
 
@@ -11,6 +10,7 @@
 
 ## 🗂 Project Structure
 
+```bash
 research_recommender/
 │
 ├── Dockerfile.qdrant              # For deploying Qdrant container (for Railway or local use)
@@ -32,7 +32,7 @@ research_recommender/
 │   ├── update_vector_db.py        # Push to Qdrant
 │   ├── recommend.py               # Recommend similar papers
 │   └── notify.py                  # Print or alert top picks
-
+```
 
 ## ⚙️ Features
 
