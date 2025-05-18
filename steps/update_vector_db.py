@@ -3,11 +3,10 @@ from qdrant_client import QdrantClient
 from qdrant_client.http.models import PointStruct
 import os
 
-QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
-QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
 COLLECTION_NAME = "research_papers"
 
-client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+qdrant_url = os.getenv("QDRANT_URL", "http://localhost:6333")
+client = QdrantClient(url=qdrant_url)
 
 @step
 def update_qdrant(papers: list, embeddings):
