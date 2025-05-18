@@ -6,7 +6,8 @@ import os
 
 COLLECTION_NAME = "research_papers"
 
-qdrant_url = os.getenv("QDRANT_URL", "http://localhost:6333")
+qdrant_url = os.getenv("QDRANT_URL")
+
 client = QdrantClient(url=qdrant_url)
 
 @step

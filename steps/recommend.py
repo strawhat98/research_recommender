@@ -2,12 +2,10 @@ from zenml import step
 from qdrant_client import QdrantClient
 import os
 
-QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
-QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
 COLLECTION_NAME = "research_papers"
 TOP_K = 5
 
-qdrant_url = os.getenv("QDRANT_URL", "http://localhost:6333")
+qdrant_url = os.getenv("QDRANT_URL")
 client = QdrantClient(url=qdrant_url)
 
 @step
