@@ -5,7 +5,7 @@ zenml[server]>=0.53.0
 arxiv==1.4.7
 
 #NLP & Embeddings
-sentence-transformers==2.2.2
+sentence-transformers>=2.2.2
 torch>=1.13.1
 transformers>=4.31.0
 
