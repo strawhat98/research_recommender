@@ -1,0 +1,1 @@
+echo $QDRANT_URL

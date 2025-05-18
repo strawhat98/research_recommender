@@ -8,8 +8,8 @@ QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
 QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
 COLLECTION_NAME = "research_papers"
 TOP_K = 5
-
-client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+QDRANT_URL = os.getenv("QDRANT_URL")
+client = QdrantClient(host=QDRANT_URL)
 
 def fetch_latest_papers(top_k=TOP_K):
     # Fetch the latest papers by search on metadata or just top points (simple approach)
