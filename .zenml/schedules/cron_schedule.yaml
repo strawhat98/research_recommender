@@ -1,0 +1,4 @@
+name: daily-paper-recommender
+pipeline_name: daily_recommender_pipeline
+cron_expression: "0 8 * * *"  # Every day at 8 AM
+start_time: now

@@ -1,0 +1,22 @@
+# Secrets and envs
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual envs
+venv/
+.env/
+.venv/
+
+# ZenML & local settings
+.zenml/local_stores/
+.zenml/.metadata/
+
+# Streamlit specific
+.streamlit/
+
+# OS files
+.DS_Store
