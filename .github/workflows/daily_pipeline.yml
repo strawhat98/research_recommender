@@ -15,10 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: print QDRANT url
-        run: |
-          echo $QDRANT_URL
-
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -32,5 +28,6 @@ jobs:
 
       - name: Run pipeline
         run: |
+          echo "QDRANT_URL is: $QDRANT_URL"
           source venv/bin/activate
           python run_pipeline.py
