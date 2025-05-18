@@ -11,6 +11,7 @@ client = QdrantClient(url=qdrant_url)
 @step
 def recommend_similar_papers(papers: list):
     # For simplicity, recommend based on the latest paper's embedding
+    print(client)
     latest_paper = papers[-1]
     query_vector = latest_paper.get("embedding")
     if query_vector is None:
