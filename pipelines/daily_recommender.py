@@ -8,13 +8,7 @@ from steps.notify import notify_results
 @pipeline(name="daily_recommender_pipeline")
 def daily_recommender_pipeline():
     papers = fetch_papers()
-    embeddings = generate_embeddings(papers)
-    update_qdrant(papers, embeddings)
-
-    enriched_papers = [
-        {**paper, "embedding": embedding.tolist()}
-        for paper, embedding in zip(papers, embeddings)
-    ]
-
-    recommendations = recommend_similar_papers(enriched_papers)
+    papers_with_embeddings = generate_embeddings(papers)
+    update_qdrant(papers_with_embeddings)
+    recommendations = recommend_similar_papers(papers_with_embeddings)
     notify_results(recommendations)

@@ -14,7 +14,6 @@ def recommend_similar_papers(papers: list):
     # For simplicity, recommend based on the latest paper's embedding
     latest_paper = papers[-1]
     query_vector = latest_paper.get("embedding")
-    
     if query_vector is None:
         raise ValueError("Latest paper must contain an 'embedding' key.")
 
