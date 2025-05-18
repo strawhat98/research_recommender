@@ -10,5 +10,11 @@ def daily_recommender_pipeline():
     papers = fetch_papers()
     embeddings = generate_embeddings(papers)
     update_qdrant(papers, embeddings)
-    recommendations = recommend_similar_papers(papers)
+
+    enriched_papers = [
+        {**paper, "embedding": embedding.tolist()}
+        for paper, embedding in zip(papers, embeddings)
+    ]
+
+    recommendations = recommend_similar_papers(enriched_papers)
     notify_results(recommendations)
