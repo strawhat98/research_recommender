@@ -1,6 +1,3 @@
-Here’s the full `README.md` file content ready to add directly to your repo. You can copy this markdown text into a file named `README.md`:
-
-````markdown
 # 🧠 Research Recommender
 
 <p>
@@ -14,7 +11,6 @@ Here’s the full `README.md` file content ready to add directly to your repo. Y
 
 ## 🗂 Project Structure
 
-```bash
 research_recommender/
 │
 ├── Dockerfile.qdrant              # For deploying Qdrant container (for Railway or local use)
@@ -36,9 +32,7 @@ research_recommender/
 │   ├── update_vector_db.py        # Push to Qdrant
 │   ├── recommend.py               # Recommend similar papers
 │   └── notify.py                  # Print or alert top picks
-````
 
----
 
 ## ⚙️ Features
 
